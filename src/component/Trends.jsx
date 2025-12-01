@@ -4,6 +4,9 @@ import trend2 from "../assets/Frankenstein.webp";
 import trend3 from "../assets/MonsterEdGein.webp";
 import trend4 from "../assets/TheWitcher.webp";
 import trend5 from "../assets/Wednesday.webp";
+import { PiArrowSquareLeft } from "react-icons/pi";
+import { PiArrowSquareRight } from "react-icons/pi";
+
 
 function Trends() {
   
@@ -55,7 +58,8 @@ const handleScrollLeft = () => {
         
         
       <div className="font-bold text-2xl pb-5 h-auto">Trending Now</div>
-      <button onClick={handleScrollLeft}>LEFT</button>
+      <div className="flex">
+      <button onClick={handleScrollLeft} className="text-8xl cursor-pointer"><PiArrowSquareLeft /></button>
       <div ref={rowRef} className="relative pl-4 flex gap-10 max-w-290 overflow-scroll hide-scrollbar overflow-y-auto h-[340px]">
         {movies.map((movie, index) => {
           return (
@@ -74,7 +78,8 @@ const handleScrollLeft = () => {
           );
         })}
       </div>
-      <button onClick={handleScrollRight}>RIGHT</button>
+      <button onClick={handleScrollRight} className="text-8xl cursor-pointer"><PiArrowSquareRight /></button>
+      </div>
     </div>
   );
 
