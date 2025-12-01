@@ -4,7 +4,7 @@ import Reasons from "./component/Reasons";
 import Trends from "./component/Trends";
 import Footer from "./component/Footer";
 import Subscription from "./component/Singerup"
-//import './App.css'
+//import './App.css'  adding to this comment to make a change
 
 
 const App = () => {
