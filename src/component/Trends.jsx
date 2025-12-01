@@ -47,11 +47,11 @@ function Trends() {
   ];
   const rowRef = useRef(null);
   const handleScrollRight = () => {
-    rowRef.current.scrollLeft += 300; // moves right
+    rowRef.current.scrollLeft += 800; // moves right
   };
 
   const handleScrollLeft = () => {
-    rowRef.current.scrollLeft -= 300; // moves left
+    rowRef.current.scrollLeft -= 800; // moves left
   };
 
   return (
@@ -63,7 +63,7 @@ function Trends() {
         </button>
         <div
           ref={rowRef}
-          className="relative pl-4 flex gap-10 max-w-290 overflow-scroll hide-scrollbar overflow-y-auto h-[340px]"
+          className="scroll-smooth relative pl-4 flex gap-10 max-w-290 overflow-scroll hide-scrollbar overflow-y-auto h-[340px]"
         >
           {movies.map((movie, index) => {
             return (
