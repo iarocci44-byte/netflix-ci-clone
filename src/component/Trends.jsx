@@ -80,7 +80,7 @@ function Trends() {
             );
           })}
         </div>
-        <button onHover={handleScrollRight} className="text-8xl cursor-pointer">
+        <button onClick={handleScrollRight} className="text-8xl cursor-pointer">
           <PiArrowSquareRight />
         </button>
       </div>
