@@ -6,8 +6,3 @@
 /* @import "tailwindcss"; */
 
 
-@layer base {
-  body {
-    @apply bg-black; /* Use your desired color here */
-  }
-}

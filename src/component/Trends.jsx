@@ -57,8 +57,8 @@ function Trends() {
   return (
     <div className="pt-5 h-auto">
       <div className="font-bold text-2xl pb-5 h-auto">Trending Now</div>
-      <div className="flex">
-        <button onClick={handleScrollLeft} className="text-8xl cursor-pointer">
+      <div className="flex relative">
+        <button onClick={handleScrollLeft} className="text-8xl cursor-pointer absolute top-30 left-0 z-100">
           <PiArrowSquareLeft />
         </button>
         <div
@@ -80,7 +80,7 @@ function Trends() {
             );
           })}
         </div>
-        <button onClick={handleScrollRight} className="text-8xl cursor-pointer">
+        <button onClick={handleScrollRight} className="text-8xl cursor-pointer absolute top-30 right-0 z-100">
           <PiArrowSquareRight />
         </button>
       </div>
