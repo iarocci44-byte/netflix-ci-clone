@@ -7,8 +7,8 @@ import trend5 from "../assets/Wednesday.webp";
 import trend6 from "../assets/KPOP.webp";
 import trend7 from "../assets/NobodyWantsThis.webp";
 import trend8 from "../assets/TheBeastInMe.webp";
-import { PiArrowSquareLeft } from "react-icons/pi";
-import { PiArrowSquareRight } from "react-icons/pi";
+import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 
 function Trends() {
   const movies = [
@@ -58,8 +58,8 @@ function Trends() {
     <div className="pt-5 h-auto">
       <div className="font-bold text-2xl pb-5 h-auto">Trending Now</div>
       <div className="flex relative">
-        <button onClick={handleScrollLeft} className="text-8xl cursor-pointer absolute top-30 left-0 z-100">
-          <PiArrowSquareLeft />
+        <button onClick={handleScrollLeft} className="text-8xl cursor-pointer absolute top-30 -left-7 z-100">
+          <IoIosArrowBack />
         </button>
         <div
           ref={rowRef}
@@ -80,8 +80,8 @@ function Trends() {
             );
           })}
         </div>
-        <button onClick={handleScrollRight} className="text-8xl cursor-pointer absolute top-30 right-0 z-100">
-          <PiArrowSquareRight />
+        <button onClick={handleScrollRight} className="text-8xl cursor-pointer absolute top-30 -right-7 z-100">
+          <IoIosArrowForward />
         </button>
       </div>
     </div>
