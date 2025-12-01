@@ -41,14 +41,24 @@ function Trends() {
       url: trend5,
     },
   ];
+  const handleScrollRight = () => {
+  rowRef.current.scrollLeft += 300; // moves right
+};
+
+const handleScrollLeft = () => {
+  rowRef.current.scrollLeft -= 300; // moves left
+};
   
   return (
     <div className="pt-5 h-auto">
       <div className="font-bold text-2xl pb-5 h-auto">Trending Now</div>
-      <div className="relative pl-4 flex gap-10 overflow-scroll hide-scrollbar overflow-y-auto h-[340px]">
+      <div className="relative pl-4 flex gap-10 max-w-290 overflow-scroll hide-scrollbar overflow-y-auto h-[340px]">
         {movies.map((movie, index) => {
           return (
+            <div>
+                <button onClick={handleScrollLeft}>LEFT</button>
             <div key={index} className="relative h-fit pt-7">
+              
               <img
                 className="hover:scale-110 transition-transform duration-300 rounded-2xl min-w-[200px] h-auto"
                 src={movie.url}
@@ -57,6 +67,9 @@ function Trends() {
               <div className="text-8xl font-bold absolute bottom-0 left-[-25px] text-stroke-white h-auto">
                 {movie.id}
               </div>
+              
+            </div>
+            <button onClick={handleScrollRight}>RIGHT</button>
             </div>
           );
         })}
