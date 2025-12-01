@@ -41,6 +41,7 @@ function Trends() {
       url: trend5,
     },
   ];
+  const rowRef = useRef(null);
   const handleScrollRight = () => {
   rowRef.current.scrollLeft += 300; // moves right
 };
@@ -51,12 +52,13 @@ const handleScrollLeft = () => {
   
   return (
     <div className="pt-5 h-auto">
+        
+        
       <div className="font-bold text-2xl pb-5 h-auto">Trending Now</div>
-      <div className="relative pl-4 flex gap-10 max-w-290 overflow-scroll hide-scrollbar overflow-y-auto h-[340px]">
+      <button onClick={handleScrollLeft}>LEFT</button>
+      <div ref={rowRef} className="relative pl-4 flex gap-10 max-w-290 overflow-scroll hide-scrollbar overflow-y-auto h-[340px]">
         {movies.map((movie, index) => {
           return (
-            <div>
-                <button onClick={handleScrollLeft}>LEFT</button>
             <div key={index} className="relative h-fit pt-7">
               
               <img
@@ -69,11 +71,10 @@ const handleScrollLeft = () => {
               </div>
               
             </div>
-            <button onClick={handleScrollRight}>RIGHT</button>
-            </div>
           );
         })}
       </div>
+      <button onClick={handleScrollRight}>RIGHT</button>
     </div>
   );
 
